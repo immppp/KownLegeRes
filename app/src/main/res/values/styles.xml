@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="QMUI.Compat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/ActivityAnimation</item>
+    </style>
+
+    <style name="ActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:activityOpenExitAnimation">@anim/animo_no</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <declare-styleable name="CYTextView">
+        <attr name="textwidth" format="integer"/>
+        <attr name="textSize" format="integer"/>
+        <attr name="textColor" format="color"/>
+        <attr name="lineSpacingExtra" format="integer"/>
+        <attr name="typeface" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="AlignTextView">
+        <attr name="alignOnlyOneLine" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="LineView">
+
+        <attr name="lineCount" format="integer"/>
+
+    </declare-styleable>
+</resources>

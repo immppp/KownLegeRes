@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_circle_blue">
+
+                <cn.imppp.knowlege.widget.LineView
+                    android:id="@+id/lineView"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_centerInParent="true"/>
+
+                <ImageView
+                    android:id="@+id/ivIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="7dp"
+                    android:paddingStart="3dp"
+                    android:paddingEnd="3dp"
+                    android:visibility="invisible"
+                    android:src="@drawable/no_level" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:paddingTop="20dp"
+                    android:paddingStart="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/content_color"
+                    android:textSize="@dimen/normal_size"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingStart="10dp"
+                    android:paddingBottom="20dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/wheel_unselect_text"
+                    android:textSize="@dimen/small_size"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

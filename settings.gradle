@@ -1,0 +1,3 @@
+rootProject.name='Knowlege'
+include ':app'
+include ':module_base'

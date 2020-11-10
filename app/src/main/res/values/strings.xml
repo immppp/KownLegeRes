@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">点点通</string>
+    <string name="app_name1">点 点 通</string>
+    <string name="loading">等待中...</string>
+
+    <string name="cure_str">主页</string>
+    <string name="mine_str">我的</string>
+    <string name="query_info">请输入病因、场所、方法等</string>
+    <string name="app_des">专注日常问题解决方案，方便您的生活</string>
+    <string name="remember_log">便捷操作</string>
+    <string name="solution_log">解决问题</string>
+    <string name="about">关于</string>
+    <string name="version">版本</string>
+    <string name="version_code">1.0.5</string>
+    <string name="call_me">技术支持</string>
+    <string name="save_centry">收藏中心</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="product_des">本产品致力于解决：\n 脱离纸质文件查找数据\n 根据现场情况随机应变\n 标语查找解决方案</string>
+    <string name="call_function">联系方式：</string>
+    <string name="wei_xin_str">X364874232</string>
+    <string name="tel_str">15967107128</string>
+    <string name="email_str">15967107128@139.com</string>
+    <string name="address_str">浙江省杭州市</string>
+    <string name="shou_cang">已收藏</string>
+    <string name="un_shou_cang">取消收藏</string>
+    <string name="prepare">出发准备</string>
+    <string name="disease">流调步骤</string>
+    <string name="social">群体性不明事件</string>
+    <string name="report">总结报告</string>
+    <string name="rule">公共安全</string>
+    <string name="time">传染病</string>
+    <string name="study">应急工具</string>
+    <string name="check">中毒甄别</string>
+    <string name="collect">疾病采集</string>
+    <string name="food">食物中毒</string>
+    <string name="water">饮用水</string>
+    <string name="kill_virus">消毒方法</string>
+    <string name="nature_monitor">灾后管理</string>
+    <string name="open_virus">解毒剂</string>
+    <string name="keep">疫苗常识</string>
+    <string name="event">防护装备</string>
+    <string name="control">病媒控制</string>
+    <string name="duty">队员职责</string>
+</resources>

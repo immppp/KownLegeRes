@@ -1,0 +1,76 @@
+ext  {
+    //开发版本配置
+    android = [
+            compileSdkVersion: 29,
+            buildToolsVersion: "29.0.2",
+            applicationId    : "cn.imppp.knowlege",
+            minSdkVersion    : 19,
+            targetSdkVersion : 29,
+            versionCode      : 1,
+            versionName      : "1.0.5",
+    ]
+
+    //androidx 版本
+    versions = [
+            "support-version": "1.1.0",
+            "junit-version"  : "4.12",
+    ]
+
+    //androidx依赖包
+    support = [
+            'appcompat'              : "androidx.appcompat:appcompat:${versions["support-version"]}",
+            'constraintlayout'       : "androidx.constraintlayout:constraintlayout:1.1.3",
+            'junit'                  : "junit:junit:${versions["junit-version"]}",
+    ]
+
+    //三方库
+    dependencies = [
+            'gson'                  : "com.google.code.gson:gson:2.8.5",
+            'glide'                 : "com.github.bumptech.glide:glide:4.11.0",
+            'glide-compiler'        : "com.github.bumptech.glide:compiler:4.11.0",
+            'eventbus'              : "org.greenrobot:eventbus:3.1.1",
+            //rx系列
+            'rxjava'                : "io.reactivex.rxjava2:rxjava:2.1.5",
+            'rxandroid'             : "io.reactivex.rxjava2:rxandroid:2.0.1",
+            'logging-interceptor'   : "com.squareup.okhttp3:logging-interceptor:3.8.0",
+            'adapter-rxjava2'       : "com.squareup.retrofit2:adapter-rxjava2:2.3.0",
+            'converter-scalars'     : "com.squareup.retrofit2:converter-scalars:2.3.0",
+            'converter-gson'        : "com.squareup.retrofit2:converter-gson:2.3.0",
+            'retrofit'              : "com.squareup.retrofit2:retrofit:2.3.0",
+            'okhttp'                : "com.squareup.okhttp3:okhttp:3.3.1",
+            'butterknife'           : "com.jakewharton:butterknife:10.0.0",
+            'butterknife-compiler'  : "com.jakewharton:butterknife-compiler:10.0.0",
+            'qmui'                  : "com.qmuiteam:qmui:2.0.0-alpha08",
+            'arch'                  : "com.qmuiteam:arch:2.0.0-alpha08",
+            'arch-compiler'         : "com.qmuiteam:arch-compiler:2.0.0-alpha08",
+            'leakcanary'            : "com.squareup.leakcanary:leakcanary-android:1.6.2",
+            'leakcanary-fragment'   : "com.squareup.leakcanary:leakcanary-support-fragment:1.6.2",
+
+            //android jetpack
+            'lifecycle-runtime'     : "androidx.lifecycle:lifecycle-runtime:2.2.0",
+            'lifecycle-java8'       : "androidx.lifecycle:lifecycle-common-java8:2.2.0",
+            'lifecycle-extensions'  : "androidx.lifecycle:lifecycle-extensions:2.2.0",
+            'viewmodel'             : "androidx.lifecycle:lifecycle-viewmodel:2.2.0",
+            'livedata'              : "androidx.lifecycle:lifecycle-livedata:2.2.0",
+            //rx系列与View生命周期同步
+            "rxlifecycle-android"                  : "com.trello.rxlifecycle2:rxlifecycle-android-lifecycle:2.2.2",
+            "rxlifecycle"                          : "com.trello.rxlifecycle2:rxlifecycle:2.2.2",
+            "rxlifecycle-components"               : "com.trello.rxlifecycle2:rxlifecycle-components:2.2.2",
+            "navigation"                           : "androidx.navigation:navigation-runtime:2.2.2",
+            //rx 6.0权限请求
+            "rxpermissions"                        : "com.github.tbruyelle:rxpermissions:0.10.2",
+            "mqtt"                  : "org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0",
+            "mqtt-service"          : "org.eclipse.paho:org.eclipse.paho.android.service:1.1.1",
+            // 图表控件
+            "mp_android_chart"        : "com.github.PhilJay:MPAndroidChart:v3.1.0",
+            //高德地图
+            "amap"                    :"com.amap.api:3dmap:latest.integration",
+            "amap_location"           :"com.amap.api:location:latest.integration",
+            "amap_search"             :"com.amap.api:search:6.5.0.1",
+            // 下拉刷新控件
+            "smart_refresh"             :"com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-andx-11",
+            "smart_refresh_head"        :"com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-andx-11",
+            "smart_support"             :"androidx.legacy:legacy-support-v4:1.0.0",
+
+    ]
+}

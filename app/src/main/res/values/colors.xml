@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="theme">#3082F9</color>
+
+    <color name="main_color">#0C2242</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#0C2242</color>
+
+    <color name="transparent">#00ffffff</color>
+
+    <color name="common_tv_color">#0C2242</color>
+    <color name="common_hint_tv_color">#0C2242</color>
+
+    <!--dialog文字颜色-->
+    <color name="dialog_title_color">#0C2242</color>
+    <color name="dialog_msg_color">#0C2242</color>
+    <color name="dialog_confirm_color">#0C2242</color>
+    <color name="dialog_cancel_color">#0C2242</color>
+    <color name="dialog_divider_color">#0C2242</color>
+
+    <!--    滑块初始颜色定义-->
+    <color name="silde_button_close">#999999</color>
+    <color name="silde_button_open">#448cd6</color>
+
+    <!--    阴影颜色定义-->
+    <color name="shadow_color">#0079E2</color>
+    <color name="aa_shadow_color">#133082F9</color>
+    <color name="shadow_red_color">#DC5858</color>
+    <color name="real_shadow_color">#230079e2</color>
+
+    <color name="grey_bg">#7B8A9F</color>
+    <color name="edit_box">#E9EDF3</color>
+    <color name="next_grey">#A8B3C2</color>
+    <color name="dialog_bg">#EFF1F3</color>
+    <color name="toast_bg">#990C2242</color>
+
+    <color name="wheel_select_text">#ffffff</color>
+    <color name="wheel_unselect_text">#9e9492</color>
+    <color name="wheel_select_text_bg">#EFF1F3</color>
+
+    <color name="slide_bg">#D6E6FE</color>
+    <color name="hint_text_color">#A8B3C2</color>
+
+    <color name="before_color">#000000</color>
+
+    <color name="yellow">#FFA500</color>
+
+    <color name="content_color">#000000</color>
+</resources>

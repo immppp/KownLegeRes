@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.imppp.knowlege">
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.activity.CenturyActivity"/>
+        <activity android:name=".ui.activity.QueryActivity" />
+        <activity android:name=".ui.activity.SecondLevelActivity" />
+        <activity android:name=".ui.activity.ThreeLevelActivity" />
+        <activity android:name=".ui.activity.OneLevelActivity" />
+        <activity android:name=".ui.activity.BusinessActivity" />
+        <activity android:name=".ui.activity.CollectCentreActivity" />
+        <activity android:name=".ui.activity.AboutActivity" />
+        <activity android:name=".ui.activity.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
