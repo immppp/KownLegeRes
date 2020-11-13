@@ -81,8 +81,6 @@ public class CollectCentreActivity extends BaseActivity implements OnRecyclerVie
             Intent intent = null;
             switch (level) {
                 case 1:
-                    intent = new Intent(App.getContext(), OneLevelActivity.class);
-                    break;
                 case 2:
                     intent = new Intent(App.getContext(), SecondLevelActivity.class);
                     break;

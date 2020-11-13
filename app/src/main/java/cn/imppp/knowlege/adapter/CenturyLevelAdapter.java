@@ -32,10 +32,12 @@ public class CenturyLevelAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     private List<CenturyLevelEntity> mList;
     private Context mContext;
+    private boolean isSecond;
 
-    public CenturyLevelAdapter(Context context, List<CenturyLevelEntity> list) {
+    public CenturyLevelAdapter(Context context, List<CenturyLevelEntity> list, boolean isSecond) {
         mContext = context;
         mList = list;
+        this.isSecond = isSecond;
     }
 
     @NonNull
@@ -54,25 +56,17 @@ public class CenturyLevelAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         binding.llClick.setOnClickListener(click -> {
             Intent intent;
             if (CheckPageFactory.haveNextPage(oneLevelEntity.getNextFile().getTag())) {
-                intent = new Intent(App.getContext(), OneLevelActivity.class);
-                intent.putExtra(Constant.LINE_COUNT, 3);
+                if (isSecond) {
+                    App.getApp().exitOne();
+                    intent = new Intent(App.getContext(), SecondLevelActivity.class);
+                } else {
+                    intent = new Intent(App.getContext(), OneLevelActivity.class);
+                }
             } else {
                 intent = new Intent(App.getContext(), ThreeLevelActivity.class);
             }
             intent.putExtra(Constant.TAG, oneLevelEntity.getNextFile().getTag());
             App.getContext().startActivity(intent);
-//            int tag = oneLevelEntity.getOneLevel();
-//            Intent intent;
-//            if (tag != 0) {
-//                // 表示没有二级页面，直接跳转3级
-//                intent = new Intent(App.getContext(), OneLevelActivity.class);
-//                intent.putExtra(Constant.TAG, oneLevelEntity.getOneLevel());
-//            } else {
-//                // 跳转二级页面
-//                intent = new Intent(App.getContext(), OneLevelActivity.class);
-//                intent.putExtra(Constant.TAG, oneLevelEntity.getSecondLevel());
-//            }
-//            App.getContext().startActivity(intent);
         });
 
         // 表示存在二级目录

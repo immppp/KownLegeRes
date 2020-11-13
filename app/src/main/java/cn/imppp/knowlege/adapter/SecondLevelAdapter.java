@@ -33,12 +33,14 @@ public class SecondLevelAdapter extends RecyclerView.Adapter<BaseViewHolder> {
     private Context mContext;
     private boolean flag;
     private int lineCount;
+    private boolean isSecond;
 
-    public SecondLevelAdapter(Context context, List<SecondLevelEntity> list, boolean flag, int lineCount) {
+    public SecondLevelAdapter(Context context, List<SecondLevelEntity> list, boolean flag, int lineCount, boolean isSecond) {
         mContext = context;
         mList = list;
         this.flag = flag;
         this.lineCount = lineCount;
+        this.isSecond = isSecond;
     }
 
     @NonNull
@@ -62,8 +64,12 @@ public class SecondLevelAdapter extends RecyclerView.Adapter<BaseViewHolder> {
             if (oneLevelEntity.getNextFile().getTag() == 154 && mList.get(position-1).getNextFile().getTag() == 386) {
                 intent = new Intent(App.getContext(), ThreeLevelActivity.class);
             } else if (CheckPageFactory.haveNextPage(oneLevelEntity.getNextFile().getTag())) {
-                intent = new Intent(App.getContext(), OneLevelActivity.class);
-                intent.putExtra(Constant.LINE_COUNT, lineCount+1);
+                if (isSecond) {
+                    App.getApp().exitOne();
+                    intent = new Intent(App.getContext(), SecondLevelActivity.class);
+                } else {
+                    intent = new Intent(App.getContext(), OneLevelActivity.class);
+                }
             } else {
                 intent = new Intent(App.getContext(), ThreeLevelActivity.class);
             }

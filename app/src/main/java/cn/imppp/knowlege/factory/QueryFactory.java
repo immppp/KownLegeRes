@@ -670,8 +670,8 @@ public class QueryFactory {
 
 
         // ==================
-        queryBean = new QueryBean(FileTagEnum.WEN_CONTROL.getTag(), FileTagEnum.WEN_CONTROL.getTitleMessage());
-        mList.add(queryBean);
+//        queryBean = new QueryBean(FileTagEnum.WEN_CONTROL.getTag(), FileTagEnum.WEN_CONTROL.getTitleMessage());
+//        mList.add(queryBean);
         queryBean = new QueryBean(FileTagEnum.WEN_CONTROL1.getTag(), FileTagEnum.WEN_CONTROL1.getTitleMessage());
         mList.add(queryBean);
         queryBean = new QueryBean(FileTagEnum.WEN_CONTROL2.getTag(), FileTagEnum.WEN_CONTROL2.getTitleMessage());

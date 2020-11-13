@@ -1,32 +1,22 @@
 package cn.imppp.knowlege.ui.activity;
 
-import androidx.annotation.RequiresApi;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import cn.imppp.knowlege.R;
-import cn.imppp.knowlege.adapter.SecondLevelAdapter;
 import cn.imppp.knowlege.adapter.TextAndListAdapter;
 import cn.imppp.knowlege.base.BaseActivity;
 import cn.imppp.knowlege.databinding.ActivityThreeLevelBinding;
-import cn.imppp.knowlege.entity.SecondLevelEntity;
+import cn.imppp.knowlege.entity.BottomPageEntity;
+import cn.imppp.knowlege.factory.RevertBeforeFactory;
 import cn.imppp.knowlege.factory.RevertContentFactory;
 import cn.imppp.knowlege.factory.RevertListAndTextContentFactory;
 import cn.imppp.knowlege.factory.RevertTitleFactory;
 import cn.imppp.knowlege.state.ThreeLevelViewModel;
-import cn.imppp.knowlege.utils.TextJustification;
-import cn.imppp.knowlege.utils.TextUtil;
 
-import android.os.Build;
 import android.os.Bundle;
-import android.text.Html;
-import android.text.Spanned;
-import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.Display;
 import android.view.View;
-import android.view.animation.AnimationUtils;
-import android.view.animation.LayoutAnimationController;
 
 import java.util.List;
 
@@ -50,6 +40,15 @@ public class ThreeLevelActivity extends BaseActivity {
         normalViewModel.titleView.setValue(titleViewModel);
         binding.setVm(normalViewModel);
         loadData();
+
+        // 遍历子串集合
+        int beforeTag = TAG;
+        while (beforeTag > -10) {
+            BottomPageEntity bottomPageEntity = new BottomPageEntity(beforeTag,
+                    RevertTitleFactory.getInstant().getTitleMessage(beforeTag));
+            beforeTag = RevertBeforeFactory.getInstance().getBeforeTag(beforeTag);
+            Log.i("ThreeLevelActivity", bottomPageEntity.toString());
+        }
     }
 
     private void loadData() {

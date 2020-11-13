@@ -53,11 +53,11 @@ public class HomeActivity extends BaseActivity {
             }
         });
         DBOperate dbManager = new DBOperate();
-        if ("显示即将到期".equals(DateUtils.dateDiff("2020-11-30 16:39:00"))) {
-            finish();
-        } else {
-            Log.i("距离到期时间：", DateUtils.dateDiff("2020-11-21 16:39:00"));
-        }
+//        if ("显示即将到期".equals(DateUtils.dateDiff("2020-11-30 16:39:00"))) {
+//            finish();
+//        } else {
+//            Log.i("距离到期时间：", DateUtils.dateDiff("2020-11-21 16:39:00"));
+//        }
     }
 
     private void setPage(int switchPage) {

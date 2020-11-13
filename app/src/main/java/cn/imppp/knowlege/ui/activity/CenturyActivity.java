@@ -1,19 +1,14 @@
 package cn.imppp.knowlege.ui.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import cn.imppp.knowlege.R;
 import cn.imppp.knowlege.adapter.CenturyLevelAdapter;
-import cn.imppp.knowlege.adapter.OneLevelAdapter;
 import cn.imppp.knowlege.base.BaseActivity;
 import cn.imppp.knowlege.databinding.ActivityCentureBinding;
 import cn.imppp.knowlege.entity.CenturyLevelEntity;
-import cn.imppp.knowlege.entity.OneLevelEntity;
 import cn.imppp.knowlege.factory.RevertCenturyLevelFactory;
-import cn.imppp.knowlege.factory.RevertContentFactory;
-import cn.imppp.knowlege.factory.RevertHasSortFactory;
 import cn.imppp.knowlege.factory.RevertTitleFactory;
 import cn.imppp.knowlege.state.OneLevelViewModel;
 
@@ -52,7 +47,7 @@ public class CenturyActivity extends BaseActivity {
 
     private void loadData() {
         List<CenturyLevelEntity> mList = RevertCenturyLevelFactory.getInstance().getData(TAG);
-        CenturyLevelAdapter oneLevelAdapter = new CenturyLevelAdapter(this, mList);
+        CenturyLevelAdapter oneLevelAdapter = new CenturyLevelAdapter(this, mList, false);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         binding.recyclerView.setLayoutManager(linearLayoutManager);
         LayoutAnimationController controller = new LayoutAnimationController(AnimationUtils.loadAnimation(this,R.anim.animate));

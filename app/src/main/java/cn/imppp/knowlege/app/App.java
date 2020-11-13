@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.senthink.module_base.crash.CaocConfig;
 import com.senthink.module_base.utils.Utils;
@@ -94,11 +95,24 @@ public class App extends Application {
         }
         mActivities.clear();
     }
+
+    public void exitOne() {
+        mActivities.get(mActivities.size()-1).finish();
+    }
+
+    public void exitActivity(int size) {
+        Log.i("APP",  size + "个数");
+        for (int i=0; i<size; i++) {
+            mActivities.get(mActivities.size()-1-i).finish();
+        }
+    }
+
     public void addActivity(Activity activity) {
         mActivities.add(activity);
     }
 
     public void removeActivity(Activity activity) {
+        Log.i("APP",  activity.toString() + "个数");
         mActivities.remove(activity);
     }
 
