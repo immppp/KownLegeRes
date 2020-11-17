@@ -2,6 +2,7 @@ package cn.imppp.knowlege.base;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -52,6 +53,9 @@ public abstract class BaseActivity extends AppCompatActivity implements ClickPro
         initVariable();
         boolean flag = recordCenturyDao.exesit(TAG);
         titleViewModel.shouCang.set(flag);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setNavigationBarColor(Color.parseColor("#ffffff"));
+        }
     }
 
     @Override
@@ -75,7 +79,6 @@ public abstract class BaseActivity extends AppCompatActivity implements ClickPro
 
     @Override
     public void backClick() {
-        Log.e("titleClick", "返回按钮被点击" + mSkinManager.getName());
         finish();
     }
 
